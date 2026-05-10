@@ -49,6 +49,31 @@
               前往联系页面
             </RouterLink>
           </div>
+
+          <!-- 新增：团队和案例快速入口 -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+            <div class="card text-center hover:shadow-lg transition-shadow duration-300">
+              <div class="text-4xl mb-4">👥</div>
+              <h2 class="text-2xl font-semibold mb-3">我们的团队</h2>
+              <p class="text-gray-600 mb-4">
+                认识我们专业、优秀的团队成员，了解他们的专业背景和技能。
+              </p>
+              <RouterLink to="/team" class="btn-primary inline-block">
+                查看团队介绍
+              </RouterLink>
+            </div>
+
+            <div class="card text-center hover:shadow-lg transition-shadow duration-300">
+              <div class="text-4xl mb-4">🏆</div>
+              <h2 class="text-2xl font-semibold mb-3">客户案例</h2>
+              <p class="text-gray-600 mb-4">
+                浏览我们的成功案例和项目作品集，了解我们为客户创造的价值。
+              </p>
+              <RouterLink to="/portfolio" class="btn-primary inline-block">
+                查看案例展示
+              </RouterLink>
+            </div>
+          </div>
         </div>
       </div>
     </main>
