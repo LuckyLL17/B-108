@@ -19,7 +19,13 @@
               <RouterLink to="/services" class="hover:text-white transition-colors">服务</RouterLink>
             </li>
             <li>
+              <RouterLink to="/cases" class="hover:text-white transition-colors">客户案例</RouterLink>
+            </li>
+            <li>
               <RouterLink to="/about" class="hover:text-white transition-colors">关于我们</RouterLink>
+            </li>
+            <li>
+              <RouterLink to="/team" class="hover:text-white transition-colors">团队介绍</RouterLink>
             </li>
             <li>
               <RouterLink to="/contact" class="hover:text-white transition-colors">联系我们</RouterLink>
