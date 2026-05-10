@@ -40,6 +40,45 @@
             </ul>
           </div>
 
+          <!-- 团队和案例快速入口 -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div class="card group">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4">
+                  <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <h2 class="text-xl font-semibold">团队介绍</h2>
+              </div>
+              <p class="text-gray-600 mb-4">了解我们充满激情和专业素养的团队成员，每一位都在各自领域深耕多年。</p>
+              <RouterLink to="/team" class="text-primary-600 font-medium group-hover:text-primary-700 inline-flex items-center transition-colors">
+                查看团队
+                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </RouterLink>
+            </div>
+
+            <div class="card group">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4">
+                  <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                  </svg>
+                </div>
+                <h2 class="text-xl font-semibold">客户案例</h2>
+              </div>
+              <p class="text-gray-600 mb-4">查看我们为众多行业客户打造的优质解决方案和成功项目案例。</p>
+              <RouterLink to="/cases" class="text-primary-600 font-medium group-hover:text-primary-700 inline-flex items-center transition-colors">
+                查看案例
+                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </RouterLink>
+            </div>
+          </div>
+
           <div class="card">
             <h2 class="text-2xl font-semibold mb-4">联系我们</h2>
             <p class="text-gray-700 mb-4">

@@ -19,6 +19,22 @@ const routes: RouteRecordRaw[] = [
     }
   },
   {
+    path: '/team',
+    name: 'team',
+    component: () => import('@/views/Team.vue'),
+    meta: {
+      title: '团队介绍'
+    }
+  },
+  {
+    path: '/cases',
+    name: 'cases',
+    component: () => import('@/views/Cases.vue'),
+    meta: {
+      title: '客户案例'
+    }
+  },
+  {
     path: '/services',
     name: 'services',
     component: () => import('@/views/Services.vue'),
