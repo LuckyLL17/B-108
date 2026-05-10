@@ -33,6 +33,22 @@ const routes: RouteRecordRaw[] = [
     meta: {
       title: '联系我们'
     }
+  },
+  {
+    path: '/team',
+    name: 'team',
+    component: () => import('@/views/Team.vue'),
+    meta: {
+      title: '我们的团队'
+    }
+  },
+  {
+    path: '/portfolio',
+    name: 'portfolio',
+    component: () => import('@/views/Portfolio.vue'),
+    meta: {
+      title: '客户案例'
+    }
   }
 ]
 
