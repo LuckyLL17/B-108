@@ -5,6 +5,17 @@
     <main class="flex-1 py-12">
       <div class="container-custom">
         <div class="max-w-6xl mx-auto">
+          <!-- 返回按钮 -->
+          <button
+            @click="goBack"
+            class="inline-flex items-center text-gray-600 hover:text-primary-600 font-medium transition-colors mb-6 group"
+          >
+            <svg class="w-5 h-5 mr-1 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+            返回上一页
+          </button>
+
           <!-- 页面标题 -->
           <div class="text-center mb-12">
             <h1 class="text-4xl font-bold mb-4">团队介绍</h1>
@@ -138,6 +149,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import LoadingSpinner from '@/components/LoadingSpinner.vue'
@@ -145,6 +157,12 @@ import ErrorMessage from '@/components/ErrorMessage.vue'
 import { useAppStore } from '@/stores/app'
 
 const appStore = useAppStore()
+const router = useRouter()
+
+// 返回上一页
+const goBack = () => {
+  router.back()
+}
 
 // 团队成员数据接口
 interface TeamMember {
