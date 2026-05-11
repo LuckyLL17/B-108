@@ -40,7 +40,7 @@
             </ul>
           </div>
 
-          <div class="card">
+          <div class="card mb-8">
             <h2 class="text-2xl font-semibold mb-4">联系我们</h2>
             <p class="text-gray-700 mb-4">
               如果您有任何问题或需要帮助，欢迎随时与我们联系。
@@ -48,6 +48,31 @@
             <RouterLink to="/contact" class="btn-primary inline-block">
               前往联系页面
             </RouterLink>
+          </div>
+
+          <div class="card">
+            <h2 class="text-2xl font-semibold mb-6 text-center">我们的团队</h2>
+            <p class="text-gray-700 text-center mb-8 max-w-2xl mx-auto">
+              我们拥有一支经验丰富、充满激情的专业团队，致力于为客户提供最优质的服务和解决方案。
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div
+                v-for="member in teamMembers"
+                :key="member.id"
+                class="text-center p-6 rounded-lg bg-gray-50 hover:shadow-md transition-shadow"
+              >
+                <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden bg-gray-200">
+                  <img
+                    :src="member.avatar"
+                    :alt="member.name"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-1">{{ member.name }}</h3>
+                <p class="text-primary-600 font-medium mb-3">{{ member.position }}</p>
+                <p class="text-gray-600 text-sm leading-relaxed">{{ member.bio }}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -69,4 +94,57 @@ import { useAppStore } from '@/stores/app'
 import { RouterLink } from 'vue-router'
 
 const appStore = useAppStore()
+
+interface TeamMember {
+  id: number
+  name: string
+  position: string
+  avatar: string
+  bio: string
+}
+
+const teamMembers: TeamMember[] = [
+  {
+    id: 1,
+    name: '张伟',
+    position: 'CEO & 创始人',
+    avatar: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20asian%20business%20man%20portrait%20headshot%20formal&image_size=square_hd',
+    bio: '拥有15年行业经验，曾任职于多家知名科技公司，致力于为客户创造价值。'
+  },
+  {
+    id: 2,
+    name: '李娜',
+    position: '技术总监',
+    avatar: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20asian%20woman%20tech%20leader%20portrait%20headshot&image_size=square_hd',
+    bio: '资深软件工程师，专注于云计算和大数据领域，带领团队完成多个重要项目。'
+  },
+  {
+    id: 3,
+    name: '王强',
+    position: '产品经理',
+    avatar: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20asian%20product%20manager%20portrait%20headshot%20business&image_size=square_hd',
+    bio: '10年产品设计经验，善于深入理解用户需求，打造优秀的产品体验。'
+  },
+  {
+    id: 4,
+    name: '刘芳',
+    position: '设计总监',
+    avatar: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20asian%20female%20designer%20creative%20portrait&image_size=square_hd',
+    bio: '获奖无数的设计师，擅长品牌设计和用户界面设计，让每个作品都充满创意。'
+  },
+  {
+    id: 5,
+    name: '陈明',
+    position: '市场总监',
+    avatar: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20asian%20marketing%20director%20business%20portrait&image_size=square_hd',
+    bio: '数字营销专家，帮助众多企业实现品牌增长，拥有丰富的市场策略经验。'
+  },
+  {
+    id: 6,
+    name: '赵丽',
+    position: '客户经理',
+    avatar: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20asian%20customer%20service%20manager%20portrait&image_size=square_hd',
+    bio: '以客户为中心，始终保持热情和专业，确保每个客户都能获得最佳服务体验。'
+  }
+]
 </script>

@@ -61,6 +61,7 @@ const mobileMenuOpen = ref(false)
 const navItems = [
   { path: '/', label: '首页' },
   { path: '/services', label: '服务' },
+  { path: '/portfolio', label: '客户案例' },
   { path: '/about', label: '关于我们' },
   { path: '/contact', label: '联系我们' }
 ]
